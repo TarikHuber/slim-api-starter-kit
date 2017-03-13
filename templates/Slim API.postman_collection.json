@@ -1,0 +1,947 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Slim API",
+		"_postman_id": "61d045a5-3809-9c03-a527-b850629a46c0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Log",
+			"description": "",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/api_logs",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/api_logs/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"url": "{{app}}/v1/auth/signup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "de",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "demo@demo.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "demo",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "confirm_password",
+									"value": "demo",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "demo",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"url": "{{app}}/v1/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "de",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "demo@demo.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "demo",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "{{app}}/v1/clients",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 4",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/clients/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "{{app}}/v1/clients/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/clients",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/clients/4",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "{{app}}/v1/items",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "locale",
+								"value": "de",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Item 123",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "number",
+									"value": "123",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "ean",
+									"value": "1234",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/items/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "{{app}}/v1/items/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/items",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/items/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Me",
+			"description": "",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/me",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "{{app}}/v1/me",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"url": "{{app}}/v1/me/change_password",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "{{app}}/v1/roles",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "locale",
+								"value": "de",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "items",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "grants",
+									"value": "items_get",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/roles/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "{{app}}/v1/roles/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grants",
+									"value": "items_delete",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "items2",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/roles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/roles/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/users/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "{{app}}/v1/users/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Client 1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"url": "{{app}}/v1/users/1/change_password",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "locale",
+								"value": "de",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/users/2",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsersClients",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "{{app}}/v1/users_clients",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/users_clients/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/users_clients",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/users_clients/4",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsersClientsRoles",
+			"description": "",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"url": "{{app}}/v1/users_clients_roles",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "role_id",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"url": "{{app}}/v1/users_clients_roles/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"url": "{{app}}/v1/users_clients_roles",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"url": "{{app}}/v1/users_clients_roles/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{api-key}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
