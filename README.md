@@ -51,7 +51,7 @@ Why could this project be interesting to you? Well , it has some features that c
 
 ### Clone repository
 
-For the instalation we need to clone this github project a forked version of it:
+For the installation we need to clone this github project or a forked version of it:
 
 ```bash
 git clone https://github.com/TarikHuber/slim-api-starter-kit your_project_name
