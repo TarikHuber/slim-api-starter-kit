@@ -78,7 +78,7 @@ $container['authentication_controller']=function($c){
   );
 };
 
-$container['grants_controller']=function($c){ return new \App\Controllers\Grants_Controller(); };
+$container['grants_controller']=function($c){ return new \App\Controllers\Grants_Controller($c->get('router')); };
 
 $container['me_controller']=function($c){
 
